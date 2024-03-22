@@ -1,15 +1,24 @@
 package com.rudevelopers.healthcare.api;
 
 import com.rudevelopers.healthcare.dto.request.RequestDoctorDto;
+import com.rudevelopers.healthcare.service.DoctorService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/doctors")
 public class DoctorController {
 
+    private final DoctorService doctorService;
+
+    public DoctorController(DoctorService doctorService) {
+        this.doctorService = doctorService;
+    }
+
     @PostMapping
     public String createDoctor(@RequestBody RequestDoctorDto doctorDto){
-        return doctorDto.toString();
+
+        doctorService.createDoctor(doctorDto);
+        return doctorDto.getName();
     }
 
 

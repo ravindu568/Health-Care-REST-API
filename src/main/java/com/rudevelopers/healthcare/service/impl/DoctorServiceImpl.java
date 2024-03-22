@@ -1,5 +1,6 @@
 package com.rudevelopers.healthcare.service.impl;
 
+import com.rudevelopers.healthcare.dto.request.RequestDoctorDto;
 import com.rudevelopers.healthcare.dto.response.ResponseDoctorDto;
 import com.rudevelopers.healthcare.entity.Doctor;
 import com.rudevelopers.healthcare.repo.DoctorRepo;
@@ -23,7 +24,7 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     @Override
-    public void createDoctor(ResponseDoctorDto dto) {
+    public void createDoctor(RequestDoctorDto dto) {
 
         UUID uuid= UUID.randomUUID();
         long docId= uuid.getMostSignificantBits();
