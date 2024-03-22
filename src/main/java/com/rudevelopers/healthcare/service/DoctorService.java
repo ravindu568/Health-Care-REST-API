@@ -7,7 +7,6 @@ import java.util.List;
 public interface DoctorService {
 
     public void createDoctor(ResponseDoctorDto dto);
-
     public ResponseDoctorDto findDoctor(long id);
     public void deleteDoctor(long id);
     public void updateDoctor(long id);
