@@ -1,13 +1,12 @@
 package com.rudevelopers.healthcare.dto.response;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
-@Getter
-@Setter
+
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ResponseDoctorDto {
     @Id
     private long id;
